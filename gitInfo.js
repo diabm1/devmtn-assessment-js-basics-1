@@ -10,6 +10,7 @@
 */
 
 //CODE HERE
+let gitDefinition = "Git is a distrubuted version control system used for tracking changes in software development projects."
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -18,6 +19,7 @@
 */
 
 //CODE HERE
+let gitHubDefinition = "GitHub is a web-based hosting service for software development projects that use Git as their version control system."
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -26,6 +28,7 @@
 */
 
 //CODE HERE
+let gitInitDefinition = "'git init' is a command used in Git to initialize a new Git repository. When you run this command in a directory. Git creates a new repository in that directory with a '.git' subdirectory that contains all the necessary files and data to manage version control for your project."
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -42,6 +45,8 @@
 */
 
 //CODE HERE
+let gitStatusDefinition = "'git status' is a Git command that displays the current status of the local repository. It shows which files have been modified, added, or deleted since the last commit, and which files are staged or unstaged for the next commit."
+
 
 //////////////////PROBLEM 6////////////////////
 /*
@@ -53,6 +58,8 @@
 */
 
 //CODE HERE
+let gitAddDefinition = "'git add' is a Git commit that stages changes for the next commit."
+let gitAddCode = "git add .";
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -64,7 +71,9 @@
 */
 
 //CODE HERE
+let gitCommitDefinition = "'git commit' is a Git command that creates a new commit with the changes that you have staged using the 'git add' command. When you use 'git commit', you are essentially creating a snapshot of the changes in your repository at that particular moment in time."
 
+let gitCommitCode = "git commit -m 'initial commit'"
 
 //////////////////PROBLEM 8////////////////////
 /*
@@ -73,3 +82,4 @@
 */
 
 //CODE HERE
+let gitPushDefinition = "'git push' is a Git command used to upload local repository content to a remote repository."
