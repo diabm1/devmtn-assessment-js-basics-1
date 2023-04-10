@@ -81,21 +81,20 @@ console.log(totalAcres);
 let count = 0;
 // totalAcres == total sum of all arrays; count how many numbers you've added up. 21//but how do I get it to calculate it to 21
 for (let i = 0; i < fujiAcres.length; i++) {
-    count += i;
+  count += i;
 }
 for (let i = 0; i < galaAcres.length; i++) {
-    count += i;
+  count += i;
 }
 for (let i = 0; i < pinkAcres.length; i++) {
-    count += i;
+  count += i;
 }
 
 // console.log(count);
 
-let averageDailyAcres = totalAcres/count;
+let averageDailyAcres = totalAcres / count;
 
-console.log(averageDailyAcres)
-
+console.log(averageDailyAcres);
 
 // PROBLEM 3
 
@@ -130,12 +129,12 @@ let acresLeft = 174;
 let days = 0;
 
 // CODE HERE
-while(days < acresLeft){
-    acresLeft -= averageDailyAcres 
-    days++
+while (days < acresLeft) {
+  acresLeft -= averageDailyAcres;
+  days++;
 }
 
-console.log(days)
+console.log(days);
 
 // PROBLEM 4
 
@@ -163,9 +162,24 @@ console.log(days)
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+let fujiTons = fujiAcres.slice();
+let galaTons = galaAcres.slice();
+let pinkTons = pinkAcres.slice();
+
+for (let i = 0; i < fujiTons.length; i++) {
+  fujiTons[i] *= 6.5;
+}
+console.log(fujiTons);
+
+for (let i = 0; i < galaTons.length; i++) {
+  galaTons[i] *= 6.5;
+}
+console.log(galaTons);
+
+for (let i = 0; i < pinkTons.length; i++) {
+  pinkTons[i] *= 6.5;
+}
+console.log(pinkTons);
 
 // PROBLEM 5
 
@@ -185,9 +199,32 @@ console.log(days)
 
 // CODE HERE
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+let fujiPounds = fujiTons.slice();
+let galaPounds = galaTons.slice();
+let pinkPounds = pinkTons.slice();
+
+let sum = 0;
+for (let i = 0; i < fujiPounds.length; i++) {
+  fujiTons[i] *= 2000;
+  sum += fujiTons[i];
+}
+console.log(`fujiPounds = ${sum} lbs`);
+
+let sum2 = 0;
+for (let i = 0; i < galaTons.length; i++) {
+  galaTons[i] *= 2000;
+  sum2 += galaTons[i];
+}
+console.log(`galaPounds = ${sum2} lbs`);
+
+let sum3 = 0;
+for (let i = 0; i < pinkTons.length; i++) {
+  pinkTons[i] *= 2000;
+  sum3 = pinkTons[i];
+}
+console.log(`pinkPounds = ${sum3} lbs`);
+
+// I feel like the above answer can be changed but can't figure out yet
 
 // PROBLEM 6
 
@@ -207,9 +244,31 @@ console.log(days)
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = 0;
+let galaProfit = 0;
+let pinkProfit = 0;
+
+for (let i = 0; i < fujiPounds.length; i++) {
+  sum *= fujiPrice;
+  fujiProfit = sum;
+}
+console.log(fujiProfit);
+
+// trying out different ways to reduce the length of above number
+// console.log(Math.round(fujiProfit));
+// console.log(Number(fujiProfit.toFixed(2)));
+
+for (let i = 0; i < galaPounds.length; i++) {
+  sum *= galaPrice;
+  galaProfit = sum;
+}
+console.log(galaProfit);
+
+for (let i = 0; i < pinkPounds.length; i++) {
+  sum *= pinkPrice;
+  pinkProfit = sum;
+}
+console.log(pinkProfit);
 
 // PROBLEM 7
 
@@ -222,3 +281,5 @@ console.log(days)
 */
 
 // CODE HERE
+let totalProfit = fujiProfit + galaProfit + pinkProfit;
+console.log(totalProfit)
