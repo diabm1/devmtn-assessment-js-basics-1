@@ -199,9 +199,9 @@ console.log(pinkTons);
 
 // CODE HERE
 
-let fujiPounds = fujiTons.slice();
-let galaPounds = galaTons.slice();
-let pinkPounds = pinkTons.slice();
+let fujiPounds = fujiTons;
+let galaPounds = galaTons;
+let pinkPounds = pinkTons;
 
 let sum = 0;
 for (let i = 0; i < fujiPounds.length; i++) {
@@ -224,7 +224,7 @@ for (let i = 0; i < pinkTons.length; i++) {
 }
 console.log(`pinkPounds = ${sum3} lbs`);
 
-// I feel like the above answer can be changed but can't figure out yet
+//not sure if I did above answer correctly^^^
 
 // PROBLEM 6
 
@@ -252,7 +252,7 @@ for (let i = 0; i < fujiPounds.length; i++) {
   sum *= fujiPrice;
   fujiProfit = sum;
 }
-console.log(fujiProfit);
+console.log(Math.round(fujiProfit * 100) / 100);
 
 // trying out different ways to reduce the length of above number
 // console.log(Math.round(fujiProfit));
@@ -262,13 +262,14 @@ for (let i = 0; i < galaPounds.length; i++) {
   sum *= galaPrice;
   galaProfit = sum;
 }
-console.log(galaProfit);
+console.log(Math.round(galaProfit * 100) / 100);
 
 for (let i = 0; i < pinkPounds.length; i++) {
   sum *= pinkPrice;
   pinkProfit = sum;
 }
-console.log(pinkProfit);
+console.log(Math.round(pinkProfit * 100) / 100);
+
 
 // PROBLEM 7
 
@@ -282,4 +283,4 @@ console.log(pinkProfit);
 
 // CODE HERE
 let totalProfit = fujiProfit + galaProfit + pinkProfit;
-console.log(totalProfit)
+console.log(Math.round(totalProfit * 100) / 100);
