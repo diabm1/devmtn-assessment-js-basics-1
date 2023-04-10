@@ -78,23 +78,9 @@ console.log(totalAcres);
 */
 
 // CODE HERE
-let count = 0;
-// totalAcres == total sum of all arrays; count how many numbers you've added up. 21//but how do I get it to calculate it to 21
-for (let i = 0; i < fujiAcres.length; i++) {
-  count += i;
-}
-for (let i = 0; i < galaAcres.length; i++) {
-  count += i;
-}
-for (let i = 0; i < pinkAcres.length; i++) {
-  count += i;
-}
+let averageDailyAcres = totalAcres / 7;
 
-// console.log(count);
-
-let averageDailyAcres = totalAcres / count;
-
-console.log(averageDailyAcres);
+console.log(`averageDailyAcres = ${averageDailyAcres}`);
 
 // PROBLEM 3
 
@@ -134,7 +120,7 @@ while (days < acresLeft) {
   days++;
 }
 
-console.log(days);
+console.log(`days left = ${days}`);
 
 // PROBLEM 4
 
@@ -205,26 +191,24 @@ let pinkPounds = pinkTons;
 
 let sum = 0;
 for (let i = 0; i < fujiPounds.length; i++) {
-  fujiTons[i] *= 2000;
-  sum += fujiTons[i];
+  fujiPounds[i] *= 2000;
+  sum += fujiPounds[i];
 }
 console.log(`fujiPounds = ${sum} lbs`);
 
 let sum2 = 0;
-for (let i = 0; i < galaTons.length; i++) {
-  galaTons[i] *= 2000;
-  sum2 += galaTons[i];
+for (let i = 0; i < galaPounds.length; i++) {
+  galaPounds[i] *= 2000;
+  sum2 += galaPounds[i];
 }
 console.log(`galaPounds = ${sum2} lbs`);
 
 let sum3 = 0;
-for (let i = 0; i < pinkTons.length; i++) {
-  pinkTons[i] *= 2000;
-  sum3 = pinkTons[i];
+for (let i = 0; i < pinkPounds.length; i++) {
+  pinkPounds[i] *= 2000;
+  sum3 += pinkPounds[i];
 }
 console.log(`pinkPounds = ${sum3} lbs`);
-
-//not sure if I did above answer correctly^^^
 
 // PROBLEM 6
 
@@ -249,8 +233,9 @@ let galaProfit = 0;
 let pinkProfit = 0;
 
 for (let i = 0; i < fujiPounds.length; i++) {
-  sum *= fujiPrice;
-  fujiProfit = sum;
+  //   sum *= fujiPrice;
+  //   fujiProfit = sum;
+  fujiProfit += fujiPounds[i] * fujiPrice;
 }
 console.log(Math.round(fujiProfit * 100) / 100);
 
@@ -259,17 +244,18 @@ console.log(Math.round(fujiProfit * 100) / 100);
 // console.log(Number(fujiProfit.toFixed(2)));
 
 for (let i = 0; i < galaPounds.length; i++) {
-  sum *= galaPrice;
-  galaProfit = sum;
+  //   sum *= galaPrice;
+  //   galaProfit = sum;
+  galaProfit += galaPounds[i] * galaPrice;
 }
 console.log(Math.round(galaProfit * 100) / 100);
 
 for (let i = 0; i < pinkPounds.length; i++) {
-  sum *= pinkPrice;
-  pinkProfit = sum;
+  //   sum *= pinkPrice;
+  //   pinkProfit = sum;
+  pinkProfit += pinkPounds[i] * pinkPrice;
 }
 console.log(Math.round(pinkProfit * 100) / 100);
-
 
 // PROBLEM 7
 
