@@ -37,6 +37,7 @@ let gitInitDefinition = "'git init' is a command used in Git to initialize a new
 */
 
 //CODE HERE
+let gitCloneDefinition = "'git clone' is a command in the Git version control system that creates a copy of an existing Git repository on a local machine. The command allows a user to download a complete copy of a remote repositroy, including all the files, branches, and commit history, and store it as a new directory on their local machine."
 
 //////////////////PROBLEM 5////////////////////
 /*
