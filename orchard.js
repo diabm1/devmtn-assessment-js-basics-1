@@ -27,15 +27,13 @@
     in cents. 
 */
 
-const fujiAcres = [2, 3, 3, 2, 2, 2, 1]
-const galaAcres = [5, 2, 4, 3, 6, 2, 4]
-const pinkAcres = [1, 5, 4, 2, 1, 5, 4]
+const fujiAcres = [2, 3, 3, 2, 2, 2, 1]; // num value represents acres, indexes represent day of week
+const galaAcres = [5, 2, 4, 3, 6, 2, 4];
+const pinkAcres = [1, 5, 4, 2, 1, 5, 4];
 
-const fujiPrice = .89 
-const galaPrice = .64
-const pinkPrice = .55
-
-
+const fujiPrice = 0.89; //cost per pound
+const galaPrice = 0.64;
+const pinkPrice = 0.55;
 
 // PROBLEM 1
 
@@ -50,10 +48,22 @@ const pinkPrice = .55
 */
 
 // CODE HERE
+let totalAcres = 0;
+for (let i = 0; i < fujiAcres.length; i++) {
+  totalAcres += fujiAcres[i];
+}
+console.log(totalAcres);
 
+for (let i = 0; i < galaAcres.length; i++) {
+  totalAcres += galaAcres[i];
+}
+console.log(totalAcres);
 
+for (let i = 0; i < pinkAcres.length; i++) {
+  totalAcres += pinkAcres[i];
+}
 
-
+console.log(totalAcres);
 
 // PROBLEM 2
 
@@ -68,9 +78,23 @@ const pinkPrice = .55
 */
 
 // CODE HERE
+let count = 0;
+// totalAcres == total sum of all arrays; count how many numbers you've added up. 21//but how do I get it to calculate it to 21
+for (let i = 0; i < fujiAcres.length; i++) {
+    count += i;
+}
+for (let i = 0; i < galaAcres.length; i++) {
+    count += i;
+}
+for (let i = 0; i < pinkAcres.length; i++) {
+    count += i;
+}
 
+// console.log(count);
 
+let averageDailyAcres = totalAcres/count;
 
+console.log(averageDailyAcres)
 
 
 // PROBLEM 3
@@ -102,12 +126,16 @@ const pinkPrice = .55
 
 */
 
-let acresLeft = 174 
-let days = 0
+let acresLeft = 174;
+let days = 0;
 
 // CODE HERE
+while(days < acresLeft){
+    acresLeft -= averageDailyAcres 
+    days++
+}
 
-
+console.log(days)
 
 // PROBLEM 4
 
@@ -139,11 +167,6 @@ let days = 0
 // let galaTons =
 // let pinkTons =
 
-
-
-
-
-
 // PROBLEM 5
 
 /*
@@ -160,16 +183,11 @@ let days = 0
     Hint: there are 2000 pounds in a ton.
 */
 
-// CODE HERE 
+// CODE HERE
 
 // let fujiPounds =
 // let galaPounds =
 // let pinkPounds =
-
-
-
-
-
 
 // PROBLEM 6
 
@@ -192,11 +210,6 @@ let days = 0
 // let fujiProfit =
 // let galaProfit =
 // let pinkProfit =
-
-
-
-
-
 
 // PROBLEM 7
 
